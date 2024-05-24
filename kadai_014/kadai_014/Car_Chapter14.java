@@ -4,24 +4,20 @@ public class Car_Chapter14 {
 	private int gear = 1;
 	private int speed = 10;
 	
-	public Car_Chapter14 (int gear, int speed) {
-		this.gear = gear;
-		this.speed = speed;
-		System.out.println("発進時のギアは" + this.gear + "速");
-		System.out.println("発進時の時速は" + this.speed + "km");
+	public Car_Chapter14 () {
 	}
-	
 	
 	public void gearChange (final int afterGear) {
-		System.out.println("ギアを" + afterGear +"速に切り替えました。");
-		gear = afterGear;
+		this.gear = afterGear;
+		if(afterGear >= 1 && afterGear <= 5) {
+			this.speed = 10 * afterGear;
+		}else {
+			this.speed = 10;
+		}
+		System.out.println("ギアを" + afterGear + "速に切り替えました。");
 	}
 	public void run() {
-		if(6 > gear) {
-			System.out.println("時速は" + speed * gear + "kmです。");
-		}else { 
-			System.out.println("時速は10kmです。");
-			}
+			System.out.println("現在の時速は" + speed + "kmです。");
 	}
 }
 
