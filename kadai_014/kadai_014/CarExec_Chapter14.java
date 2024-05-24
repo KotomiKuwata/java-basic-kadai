@@ -4,8 +4,7 @@ public class CarExec_Chapter14 {
 
 	public static void main(String[] args) {
 		Car_Chapter14 gear = new Car_Chapter14(1,10);
-		int afterGear = 3;
-		gear.gearChange(afterGear);
+		gear.gearChange(3);
 		gear.run();
 	}
 
