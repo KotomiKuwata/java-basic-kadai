@@ -9,10 +9,13 @@ abstract public class Kato_Chapter17 { //親クラス
 		familyName =  "加藤";
 		address = "東京都中野区〇×";
 	}
-	
-	abstract public void eachIntroduce(); // 個別の紹介を出力する　特技　好きな食べ物　趣味
+	abstract public void eachIntroduce(); // 個別の紹介を出力する　特技　好きな食べ　趣味
+	public abstract void setGivenName();
 	
 	public void execIntroduce() { //紹介を実行する
+		commonIntroduce();
+		setGivenName();
+		eachIntroduce();
 		
 	}
 }
